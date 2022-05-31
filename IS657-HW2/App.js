@@ -46,14 +46,12 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
-    // alignItems: 'center',
+    justifyContent: 'left',
     borderWidth: 2,
     borderColor: 'green',
-    marginTop: '15%',
-    marginBottom: '15%',
-    marginLeft: '5%',
-    marginRight: '5%',
-    flexDirection: "column"
+    marginVertical: '15%',
+    marginHorizontal: '5%'
+
   },
 
   columnBox: {
@@ -99,8 +97,9 @@ const styles = StyleSheet.create({
     borderWidth: 2,
     borderStyle: 'solid',
     borderColor: 'green',
-    marginHorizontal: '10%',
-    marginVertical: '10%'
+    marginVertical: '10%',
+    backgroundColor: 'lightgray',
+    justifyContent: 'space-evenly'
 
 
   },
