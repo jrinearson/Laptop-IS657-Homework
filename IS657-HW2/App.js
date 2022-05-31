@@ -4,6 +4,7 @@ import { StyleSheet, Text, View } from 'react-native';
 export default function App() {
   return (
     <View style={styles.container}>
+      <View style={styles.containerBoxes}>
       <View style={styles.columnBox}>
         <Text style={styles.headingText}>Column</Text>
         <View style={styles.box}>
@@ -20,8 +21,12 @@ export default function App() {
         </View>
         
 
-      <Text style={styles.headingText2}>Row</Text>
+      
       <View style={styles.rowBox}>
+        <View style={styles.RowBoxAlignment}>
+          <Text style={styles.headingText2}>Row</Text>
+          </View>
+
         
         <View style={styles.box}>
           <Text style={styles.boxText}>Child</Text>
@@ -37,7 +42,7 @@ export default function App() {
 
       </View>
 
-      <StatusBar style="auto" />
+      </View>
       </View>
   );
 }
@@ -46,12 +51,15 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
-    justifyContent: 'left',
     borderWidth: 2,
     borderColor: 'green',
     marginVertical: '15%',
     marginHorizontal: '5%'
 
+  },
+
+  containerBoxes: {
+    justifyContent: 'left'
   },
 
   columnBox: {
@@ -108,6 +116,7 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: 'bold'
 
-  }
+  },
+
 
 });
