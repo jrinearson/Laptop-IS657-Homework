@@ -66,13 +66,18 @@ const styles = StyleSheet.create({
     borderWidth: 2,
     alignItems: 'center',
     justifyContent: 'center',
+
+     
   },
 
   columnContainer: {
+    
     borderWidth: 2,
     marginVertical: 10,
     marginLeft: 20,
     marginRight: 185
+
+
   },
 
   rowFlexDesign: {
@@ -82,6 +87,7 @@ const styles = StyleSheet.create({
 
   rowContainer: {
     borderWidth: 2,
+
 
   },
 
