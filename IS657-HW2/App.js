@@ -1,122 +1,103 @@
-import React from 'react';
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { Text, View } from 'react-native';
+import { styles } from './styles/styles';
+
 export default function App() {
   return (
+    // Sets the outer screen container 
+    <View style={styles.outerScreenContainer}>
 
-    // Main outer box to create borders around whole screen
-    <View style={styles.container}>
-      
-      {/*Column box surrounding child boxes*/}
-      <View style={styles.columnContainer}>
-        <Text style={styles.text}>Column</Text>
+    {/*Sets the outer container for the column */}
+      <View style={styles.outerColumnContainer}>
+
+        {/*Column text */}
+        <Text style={styles.text}>
+          Column
+        </Text>
+    
+        {/*Create view for colum tainers*/}
+        <View style={styles.innerColumnContainer}>
+
+          {/*Column child text */}
+          <Text style={styles.text}>
+            Child
+          </Text>
+        </View>
+
+       {/*Creates new view for middle column
+        container for spacing*/}
+        <View style={styles.innerColumnContainerMiddle}>
+
+          {/*Column child text */}
+          <Text style={styles.text}>
+            Child
+          </Text>
+        </View>
+
+        {/*Use original column view*/}
+        <View style={styles.innerColumnContainer}>
+         
+          {/*Column child text */}
+          <Text style={styles.text}>
+            Child
+          </Text>
+        </View>
+
+      </View>
+
+        {/*Sets the outer row container*/}
+        <View style={styles.outerRowcontainer}>
+
+          {/*Puts the row text in its on view so
+          it can go on top of the boxes not side by side*/}
+          <View style={styles.outerRowText}>
+
+            {/*Row title text*/}
+            <Text style={styles.text}>
+              Row
+            </Text>
+          </View>
         
-        {/*Column child box 1*/}
-        <View style={styles.columnBox}>
-          <Text style={styles.text}>Child</Text>
-        </View>
+          {/*Sets flex design as row */}
+          <View style={styles.rowFlexDesign}>
 
-        {/*Column child box 2*/}
-        <View style={styles.columnBox}>
-          <Text style={styles.text}>Child</Text>
-        </View>
+          {/*Row child text container */}
+          <View style={styles.innerRowContainer}>
+             
+             {/*Row child text */}
+            <Text style={styles.text}>
+              Child
+            </Text>
+          </View>
 
-        {/*Column child box 3*/}
-        <View style={styles.columnBox}>
-          <Text style={styles.text}>Child</Text>
-        </View>
-        </View>
+           {/*Creates a new view for middle row
+           container for space*/}
+          <View style={styles.innerRowContainerMiddle}>
+            
+            {/*Row child text */}
+            <Text style={styles.text}>
+              Child
+            </Text>
+          </View>
 
-      <View style={styles.rowContainer}> 
-      <Text style={styles.text}>Row</Text> 
-      
-      {/*Row box surrounding child boxes*/}
-      <View style={styles.rowFlexDesign}>
+          {/*Use original row view*/}
+          <View style={styles.innerRowContainer}>
+
+            {/*Column child text */}
+            <Text style={styles.text}>
+              Child
+            </Text>
+          </View>
+
         
-          
-        
-        {/*Row child box 1*/}
-        <View style={styles.rowBox}>
-          <Text style={styles.text}>Child</Text>
+
         </View>
 
-        {/*Row child box 2*/}
-        <View style={styles.rowBox}>
-          <Text style={styles.text}>Child</Text>
+
         </View>
 
-        {/*Row child box 3*/}
-        <View style={styles.rowBox}>
-          <Text style={styles.text}>Child</Text>
-        </View> 
-        </View>     
-      </View>   
       <StatusBar style="auto" />
     </View>
-    
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    height: 10,
-    width: 300,
-    marginVertical:200,
-    marginHorizontal: 50,
-    borderWidth: 2,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-
-  columnContainer: {
-    borderWidth: 2,
-    marginVertical: 10,
-    marginLeft: 20,
-    marginRight: 185
-  },
-
-  rowFlexDesign: {
-    flexDirection: 'row',
-    
-  },
-
-  rowContainer: {
-    borderWidth: 2,
-
-  },
-
-  columnBox: {
-    borderWidth: 2,
-    width: 80,
-    height: 50,
-    alignItems: 'center',
-    marginBottom: 5,
-    marginHorizontal: 5
-
-  },
-
-  rowBox: {
-    borderWidth: 2,
-    width: 75,
-    height: 50,
-    alignItems: 'center',
-    marginVertical: 2.5,
-    marginHorizontal: 5
-
-
-
-  },
-  text: {
-    fontSize: 18,
-    fontWeight: 'bold',
-    marginHorizontal: 5
-
-  },
-  rowHeading: {
-    borderWidth: 2
-
-  }
-
-});
