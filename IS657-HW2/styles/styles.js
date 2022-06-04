@@ -1,6 +1,7 @@
 import { StyleSheet } from 'react-native'
 
 const styles = StyleSheet.create({
+    
     outerScreenContainer: {
       flex: 2,
       borderWidth: 2,
@@ -20,8 +21,6 @@ const styles = StyleSheet.create({
       maxHeight: 300,
       maxWidth: 125,
       marginBottom: 20
-      
-      
     },
   
     innerColumnContainer: {
@@ -44,13 +43,11 @@ const styles = StyleSheet.create({
       marginVertical: 5
     },
   
-  
     rowFlexDesign: {
       flexDirection: 'row',
     },
   
     outerRowText: {
-      
     },
   
     outerRowcontainer: {
@@ -60,7 +57,6 @@ const styles = StyleSheet.create({
       paddingVertical: 20,
       maxHeight: 115,
       maxWidth: 250,
-      
     },
   
     innerRowContainer: {
@@ -75,7 +71,6 @@ const styles = StyleSheet.create({
     innerRowContainerMiddle: {
       flex: 1,
       borderWidth: 2,
-  
       alignItems: 'center',
       justifyContent: 'center',
       backgroundColor: 'lightgray',
