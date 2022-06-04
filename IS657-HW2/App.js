@@ -4,6 +4,8 @@ import { styles } from './styles/styles';
 import React from 'react';
 
 export default function App() {
+
+  const [message, setMessage] = useState ('');
   return (
     // Sets the outer screen container 
     <View style={styles.outerScreenContainer}>
