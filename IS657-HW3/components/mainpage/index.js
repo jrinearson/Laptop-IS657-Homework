@@ -17,11 +17,10 @@ const MainPage = () => {
         </View>
         <Pressable 
         style={styles.button}
-        onPress={() => {console.warn('👌Custom Order👌');}}>
+        onPress={() => {console.warn('👌U RICH👌');}}>
             <Text style={styles.buttonText}>
                 TE$T RICHNE$$
             </Text>
-
         </Pressable>
         
         </View>
