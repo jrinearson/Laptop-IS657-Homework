@@ -7,6 +7,7 @@ export default function App() {
   const [number1, setNumber1] = useState('');
   const [number2, setNumber2] = useState('');
   const [message, setMessage] = useState('');
+  const [errorMessage, setErrorMessage] = useState('');
 
   const min1 = 10;
   const max1 = 20;
@@ -17,13 +18,13 @@ export default function App() {
     const total = parseInt(number1) + parseInt(number2);
 
     if ( (number1 < min1 || number1 > max1) && (number2 < min2 || number2 > max2) ) {
-      setMessage('Number1 should be in [10, 20]\n Number2 should be in [100, 200]')
+      setErrorMessage('Number1 should be in [10, 20]\nNumber2 should be in [100, 200]')
     } else if ( number1 < min1 || number1 > max1 ){
-      setMessage('Number1 should be in [10, 20]')
+      setErrorMessage('Number1 should be in [10, 20]')
     } else if ( number2 < min2 || number2 > max2 ){
-      setMessage('Number2 should be in [100, 200]')
+      setErrorMessage('Number2 should be in [100, 200]')
     } else if (Number.isInteger(number1) || Number.isInteger(number2)) {
-      setMessage('Not an integer')
+      setErrorMessage('Not an integer')
     } else {
       setMessage(total.toString())
     }
@@ -90,8 +91,13 @@ export default function App() {
           {message}
         </Text>
       </View>
-      </View>
 
+      </View>
+      <View style={styles.errorBox}>
+      <Text style={styles.errorText}>
+        {errorMessage}
+      </Text>
+      </View>
 
       <StatusBar style="auto" />
     </View>
@@ -175,6 +181,21 @@ const styles = StyleSheet.create({
     width: '100%'
   },
 
+  errorBox: {
+    top: 20,
+    justifyContent: 'space-between',
+    width: '100%',
+    
+
+  },
+
+  errorText: {
+    color: 'red',
+    fontSize: 15,    
+    fontFamily: 'Helvetica',
+    justifyContent: 'flex-start'
+    
+  }
 
 
 });
