@@ -4,28 +4,43 @@ import { useState } from 'react';
 
 export default function App() {
 
-  const [number, setNumber] = useState(0);
-  const [number2, setNumber2] = useState(0);
+  const [number1, setNumber1] = useState('');
+  const [number2, setNumber2] = useState('');
   const [message, setMessage] = useState('');
 
+  const min1 = 10;
+  const max1 = 20;
+  const min2 = 100;
+  const max2 = 200;
+
   function getSum() {
-    const total = number + number2;
-    return `${total}`;
+    const total = parseInt(number1) + parseInt(number2);
+
+    if ( (number1 < min1 || number1 > max1) && (number2 < min2 || number2 > max2) ) {
+      setMessage('Number1 should be in [10, 20]\n Number2 should be in [100, 200]')
+    } else if ( number1 < min1 || number1 > max1 ){
+      setMessage('Number1 should be in [10, 20]')
+    } else if ( number2 < min2 || number2 > max2 ){
+      setMessage('Number2 should be in [100, 200]')
+    } else if (Number.isInteger(number1) || Number.isInteger(number2)) {
+      setMessage('Not an integer')
+    } else {
+      setMessage(total.toString())
+    }
+
   }
 
+
   function GetFirstNumber(input) {
-    const inputNumber = parseInt(input) || 0;
-    setNumber(inputNumber)
+    const inputNumber = input || '';
+    setNumber1(inputNumber)
   }
 
   function GetSecondNumber(input2) {
-    const inputNumber2 = parseInt(input2) || 0;
+    const inputNumber2 = input2 || '';
     setNumber2(inputNumber2)
   }
 
-  function RefreshPage() {
-    window.location.reload(false)
-  }
 
   return (
 
@@ -36,7 +51,7 @@ export default function App() {
       </Text>
       </View>
 
-      <View style={styles.rowDirection}>
+      <View style={styles.body}>
         <Text style={styles.text}>
           Number1 [10 to 20]
         </Text>
@@ -44,13 +59,13 @@ export default function App() {
         <View style={styles.formatInputBox}>
         <TextInput style={styles.inputBox}
         onChangeText={GetFirstNumber}
-          value={number.toString()}
+          value={number1.toString()}
           keyboardType='numeric'>
         </TextInput>
         </View>
       </View>
 
-      <View style={styles.rowDirection}>
+      <View style={styles.body}>
         <Text style={styles.text}>
           Number2 [100 to 200]
         </Text>
@@ -64,10 +79,10 @@ export default function App() {
         </View>
       </View>
       
-      <View style={styles.rowDirection}>
+      <View style={styles.body}>
         <Button
           title='CALCULATE SUM'
-          onPress = {() => setMessage(getSum)}>
+          onPress = {() => getSum()}>
         </Button>
         
         <View style={styles.sumBox}>
@@ -144,25 +159,20 @@ const styles = StyleSheet.create({
   },
 
   sumBox: {
-    
     width: 100,
     height: 50,
     color: 'black',
-    alignItems: '',
+    alignItems: 'flex-start',
     fontSize: 15,    
     fontFamily: 'Helvetica',
     padding: 5,
     borderWidth: 2,
-    
-    
-  
   },
 
-  rowDirection: {
+  body: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     width: '100%'
-
   },
 
 
