@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet} from 'react-native';
+import { ImageBackground, View, Text, StyleSheet} from 'react-native';
 import styles from './styles';
 
 export default function ProfileScreen() {
@@ -7,6 +7,9 @@ export default function ProfileScreen() {
             <ImageBackground 
             style={styles.image}
             source={require('../../assets/diamondbg.jpg')}/>
+            <Text>
+                Are you Rich?
+            </Text>
         </View>
     )
 }
