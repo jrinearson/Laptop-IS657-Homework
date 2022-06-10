@@ -1,3 +1,4 @@
+import React from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Button, Text, View, TextInput} from 'react-native';
 import { useState } from 'react';
@@ -14,22 +15,25 @@ export default function App() {
   const min2 = 100;
   const max2 = 200;
 
-  function getSum() {
+  function GetSum(input, input2) {
     const total = parseInt(number1) + parseInt(number2);
 
     if ( (number1 < min1 || number1 > max1) && (number2 < min2 || number2 > max2) ) {
       setErrorMessage('Number1 should be in [10, 20]\nNumber2 should be in [100, 200]')
+    } else if ( isNaN(number1) || isNaN(number2 )){
+      setErrorMessage('Number1 should be in [10, 20]\nNumber2 should be in [100, 200]')
     } else if ( number1 < min1 || number1 > max1 ){
       setErrorMessage('Number1 should be in [10, 20]')
-    } else if ( number2 < min2 || number2 > max2 ){
+    } else if ( number2 < min2 || number2 > max2){
       setErrorMessage('Number2 should be in [100, 200]')
-    } else if (Number.isInteger(number1) || Number.isInteger(number2)) {
+    } else if ( isNaN(number1) || isNaN(number2) ) {
       setErrorMessage('Not an integer')
     } else {
       setMessage(total.toString())
     }
-
   }
+
+
 
 
   function GetFirstNumber(input) {
@@ -83,7 +87,7 @@ export default function App() {
       <View style={styles.body}>
         <Button
           title='CALCULATE SUM'
-          onPress = {() => getSum()}>
+          onPress = {() => GetSum()}>
         </Button>
         
         <View style={styles.sumBox}>
