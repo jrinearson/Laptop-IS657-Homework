@@ -6,10 +6,12 @@ export default function ProfileScreen() {
         <View style={styles.container}>
             <ImageBackground 
             style={styles.image}
-            source={require('../../assets/diamondbg.jpg')}/>
-            <Text>
-                Are you Rich?
-            </Text>
+            source={require('../../assets/background2.png')}/>
+            <View>
+                <Text style={styles.text}>
+                    I am rich I deserv it I am good, healhty {'&'} successful
+                </Text>
+            </View>
         </View>
     )
 }

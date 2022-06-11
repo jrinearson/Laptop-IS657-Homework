@@ -4,8 +4,6 @@ const styles = StyleSheet.create({
     container: {
     flex: 1,
     backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
     width: 'initial',
     height: '100%',
     },
@@ -23,6 +21,12 @@ const styles = StyleSheet.create({
         position: 'absolute',
         resizeMode: 'contain',
       },
+
+    buttonLocation: {
+        paddingTop: '100%',
+        paddingRight: '15%',
+        alignSelf: 'flex-end'
+      }
 });
 
 export default styles;

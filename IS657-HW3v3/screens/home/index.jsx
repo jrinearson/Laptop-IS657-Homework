@@ -11,8 +11,7 @@ export default function HomeSceen({ navigation }) {
     style={styles.image}
     source={require('../../assets/background.png')}/>
 
-      <Text>Home Screen</Text>
-
+      <View style={styles.buttonLocation}>
       <Pressable onPress={() => navigation.navigate('Profile')}>
         <Image
           style={styles.logo}
@@ -20,7 +19,7 @@ export default function HomeSceen({ navigation }) {
         />
 
       </Pressable>
-      
+      </View>
     
     </View>
     
