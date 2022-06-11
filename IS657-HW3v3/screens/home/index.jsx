@@ -3,7 +3,7 @@ import { ImageBackground, View, Text, Pressable, Image } from 'react-native';
 
 import styles from './styles';
 
-export default function HomeSceen({ navigation }) {
+function HomeSceen({ navigation }) {
   return (
     
     <View style={styles.container}>
@@ -26,3 +26,5 @@ export default function HomeSceen({ navigation }) {
     
   );
 }
+
+export default HomeSceen

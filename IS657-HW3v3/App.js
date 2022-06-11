@@ -1,9 +1,8 @@
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import HomeScreen from './screens/Home';
-
-import ProfileScreen from './screens/Profile';
+import ProfileScreen from './screens/profile';
+import MainScreen from './screens/profile';
 
 export default function App() {
   const Stack = createNativeStackNavigator();
@@ -13,7 +12,7 @@ export default function App() {
       <Stack.Navigator>
         <Stack.Screen
           name='Home'
-          component={HomeScreen}
+          component={MainScreen}
           options={{ 
             headerStyle: {
               backgroundColor: 'gray'
@@ -33,7 +32,7 @@ export default function App() {
           headerStyle: {
             backgroundColor: 'gray'
           },
-          title: 'IAmRich',
+          title: '',
           headerTitleAlign: 'center',
           headerTitleStyle: {
             fontWeight: 'bold',

@@ -1,8 +1,8 @@
 import React from 'react';
-import { ImageBackground, View, Text, StyleSheet} from 'react-native';
+import { ImageBackground, View, Text} from 'react-native';
 import styles from './styles';
 
-export default function ProfileScreen() {
+function MainScreen() {
     return (
         <View style={styles.container}>
             <ImageBackground 
@@ -16,5 +16,7 @@ export default function ProfileScreen() {
         </View>
     )
 }
+
+export default MainScreen;
 
 
