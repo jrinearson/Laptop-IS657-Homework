@@ -1,8 +1,9 @@
 import React from 'react';
+
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import MainScreen from './screens/home'
-import ProfileScreen from './screens/profile';
+import MainScreen from './screens/home/index.jsx'
+import ProfileScreen from './screens/profile/index.jsx';
 
 
 export default function App() {

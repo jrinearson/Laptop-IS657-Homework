@@ -1,3 +1,4 @@
+import React from 'react';
 import { ImageBackground, View, Text} from 'react-native';
 import styles from './styles';
 

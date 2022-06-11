@@ -1,3 +1,4 @@
+import React from 'react';
 import { ImageBackground, View, Pressable, Image } from 'react-native';
 
 import styles from './styles';
