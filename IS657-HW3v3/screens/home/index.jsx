@@ -1,5 +1,5 @@
 import React from 'react';
-import { ImageBackground, View, Text, Pressable, Image } from 'react-native';
+import { ImageBackground, View, Pressable, Image } from 'react-native';
 
 import styles from './styles';
 
@@ -27,4 +27,4 @@ function HomeSceen({ navigation }) {
   );
 }
 
-export default HomeSceen
+export default HomeSceen;

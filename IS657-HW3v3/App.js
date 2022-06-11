@@ -1,8 +1,9 @@
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import MainScreen from './screens/home'
 import ProfileScreen from './screens/profile';
-import MainScreen from './screens/profile';
+
 
 export default function App() {
   const Stack = createNativeStackNavigator();
@@ -14,6 +15,7 @@ export default function App() {
           name='Home'
           component={MainScreen}
           options={{ 
+
             headerStyle: {
               backgroundColor: 'gray'
             },

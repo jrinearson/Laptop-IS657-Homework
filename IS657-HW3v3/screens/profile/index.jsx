@@ -2,7 +2,7 @@ import React from 'react';
 import { ImageBackground, View, Text} from 'react-native';
 import styles from './styles';
 
-function MainScreen() {
+function ProfileScreen() {
     return (
         <View style={styles.container}>
             <ImageBackground 
@@ -17,6 +17,6 @@ function MainScreen() {
     )
 }
 
-export default MainScreen;
+export default ProfileScreen;
 
 
