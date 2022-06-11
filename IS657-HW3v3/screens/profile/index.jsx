@@ -1,3 +1,4 @@
+import React from 'react';
 import { ImageBackground, View, Text, StyleSheet} from 'react-native';
 import styles from './styles';
 
@@ -9,7 +10,7 @@ export default function ProfileScreen() {
             source={require('../../assets/background2.png')}/>
             <View>
                 <Text style={styles.text}>
-                    I am rich I deserv it I am good, healhty {'&'} successful
+                    I am rich I deserv it I am good, healthy {'&'} successful
                 </Text>
             </View>
         </View>

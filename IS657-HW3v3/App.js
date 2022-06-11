@@ -1,9 +1,8 @@
+import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
-
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-
 import HomeScreen from './screens/Home';
-import styles from './screens/home/styles';
+
 import ProfileScreen from './screens/Profile';
 
 export default function App() {
