@@ -9,7 +9,7 @@ export default function HomeSceen({ navigation }) {
     
     <ImageBackground 
     style={styles.image}
-    source={require('../../assets/diamondbg.jpg')}/>
+    source={require('../../assets/background.png')}/>
 
       <Text>Home Screen</Text>
 

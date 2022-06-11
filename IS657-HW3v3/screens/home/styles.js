@@ -6,14 +6,15 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
-    width: '100%',
+    width: 'initial',
     height: '100%',
     },
 
     logo: {
-        width: 65,
-        height: 65,
-        top: 100
+        width: 40,
+        height: 40,
+        top: 100,
+        resizeMode: 'contain'
     },
 
     image: {
