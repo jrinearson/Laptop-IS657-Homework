@@ -8,7 +8,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'black',
     alignItems: 'center',
     justifyContent: 'center',
-    width: '100%',
+    width: 'initial',
     height: '100%',
     padding: 20
     },
@@ -29,7 +29,9 @@ const styles = StyleSheet.create({
     defaultNavigationOptions: {
       title: 'Aligned Center',
       headerTitleAlign: 'center'
-    }
+    },
+
+  
 });
 
 export default styles;
